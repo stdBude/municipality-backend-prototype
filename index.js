@@ -12,7 +12,7 @@ dns.setServers(["8.8.8.8", "1.1.1.1"])
 const app = express();
 app.use(cors({
     origin: (origin, callback) => {
-    const allowedOrigins = ['http://localhost:5173', 'https://municipality-frontend-prototype.com'];
+    const allowedOrigins = ['http://localhost:5173', 'https://municipality-frontend-prototype.onrender.com'];
     if (!origin || allowedOrigins.indexOf(origin) !== -1) {
         callback(null, true);
     } else {
