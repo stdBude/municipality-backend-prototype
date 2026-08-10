@@ -36,7 +36,7 @@ const requestSchema = new mongoose.Schema({
         type: String,
         required: true,
         trim: true,
-        enum: ["roadCrack", "electricity", "waterSupply", "garbageCollection", "other"]
+        enum: ["Road Crack", "Electricity", "Water Supply", "Garbage Collection", "other"]
     }
 
 })
