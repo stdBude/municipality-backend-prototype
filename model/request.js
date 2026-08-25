@@ -39,6 +39,8 @@ const requestSchema = new mongoose.Schema({
         enum: ["Road Crack", "Electricity", "Water Supply", "Garbage Collection", "other"]
     }
 
+},{
+    timestamps: true
 })
 
 module.exports = mongoose.model("Request", requestSchema);
