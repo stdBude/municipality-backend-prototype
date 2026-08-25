@@ -129,8 +129,10 @@ const requestsCounts = async (req, res) =>{
         const request = await Request.find({}).lean()
         const areas = request
         const uniqueCount = new Set(
-        areas.map(v => v.region.trim())
-        ).size;
+                areas
+                    .filter(v => v.region)          // drop docs with no region
+                    .map(v => v.region.trim())
+            ).size;
          const filterType = req.query.type
         const filterRegion = req.query.region
         
